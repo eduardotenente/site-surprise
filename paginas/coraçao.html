@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang=pt-br>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Sekuya&display=swap" rel="stylesheet">
+  <title>Coração!</title>
+  <style>
+        .sekuya-regular {
+          font-family: "Sekuya", system-ui;
+          font-weight: 400;
+          font-style: normal;
+        }
+
+        /* <weight>: Use a value from 300 to 900
+        <uniquifier>: Use a unique and descriptive class name */
+
+        .merriweather {
+          font-family: "Merriweather", serif;
+          font-optical-sizing: auto;
+          font-weight: 800;
+          font-style: normal;
+          font-variation-settings:
+            "wdth" 100;
+        }
+
+        body {
+            background-color: black;
+            background-size: cover;
+            color: white;
+            display: grid;
+            place-items: center;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            width: 500px;
+        }
+
+        img {
+            width: 400px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        button {
+            margin-top: 20px;
+            position: relative;
+            padding: 10px 20px;
+            border-radius: 7px;
+            border: 1px solid rgb(255, 61, 245);
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 2px;
+            background: transparent;
+            color: #fff;
+            overflow: hidden;
+            box-shadow: 0 0 0 0 transparent;
+            -webkit-transition: all 0.2s ease-in;
+            -moz-transition: all 0.2s ease-in;
+            transition: all 0.2s ease-in;
+        }
+
+        button:hover {
+          background: rgb(255, 61, 245);
+          box-shadow: 0 0 30px 5px rgb(223, 53, 214);
+          -webkit-transition: all 0.2s ease-out;
+          -moz-transition: all 0.2s ease-out;
+          transition: all 0.2s ease-out;
+        }
+
+        button:hover::before {
+          -webkit-animation: sh02 0.5s 0s linear;
+          -moz-animation: sh02 0.5s 0s linear;
+          animation: sh02 0.5s 0s linear;
+        }
+
+        button::before {
+          content: '';
+          display: block;
+          width: 0px;
+          height: 86%;
+          position: absolute;
+          top: 7%;
+          left: 0%;
+          opacity: 0;
+          background: #fff;
+          box-shadow: 0 0 50px 30px #fff;
+          -webkit-transform: skewX(-20deg);
+          -moz-transform: skewX(-20deg);
+          -ms-transform: skewX(-20deg);
+          -o-transform: skewX(-20deg);
+          transform: skewX(-20deg);
+        }
+
+        @keyframes sh02 {
+          from {
+            opacity: 0;
+            left: 0%;
+          }
+
+          50% {
+            opacity: 1;
+          }
+
+          to {
+            opacity: 0;
+            left: 100%;
+          }
+        }
+
+        button:active {
+          box-shadow: 0 0 0 0 transparent;
+          -webkit-transition: box-shadow 0.2s ease-in;
+          -moz-transition: box-shadow 0.2s ease-in;
+          transition: box-shadow 0.2s ease-in;
+        }
+    </style>
+</head>
+<body>
+    <img src="imagens/GIF/The Classy Issue.gif" alt="">
+    <main>
+        <h2 class="sekuya-regular">As chamas em nossos corações nunca irão se apagar! Eu te amo</h2>
+    </main>
+    <div id="botoes">
+        <a href="Menu.html" target="_self" rel="internal">
+            <button id="voltar" class="merriweather">Voltar para o Menu</button>
+        </a>
+    </div>
+</body>
+</html>

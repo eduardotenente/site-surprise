@@ -6,9 +6,26 @@
     box-sizing: border-box;
 }
 
+.sekuya-regular {
+  font-family: "Sekuya", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* <weight>: Use a value from 300 to 900
+ <uniquifier>: Use a unique and descriptive class name */
+
+.merriweather {
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
 body {
     background: black url(../imagens/GIF/alien-stage.gif) center center no-repeat fixed;
-    background-size: cover;
     height: 100vh;
     display: grid;
 }
@@ -16,7 +33,7 @@ body {
 main {
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 20%;
 }
@@ -25,10 +42,10 @@ h1 {
      color: white;
      font-family: sans-serif;
      text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+     margin-top: 20%;
 }
 
 .btn {
-    margin-top: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,7 +58,7 @@ h1 {
   border-radius: 5rem;
   transition: 0.5s;
   animation: gradient_301 5s ease infinite;
-  border: double 4px transparent;
+  border: double 2px transparent;
   background-image: linear-gradient(#212121, #212121),
     linear-gradient(
       137.48deg,

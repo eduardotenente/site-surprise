@@ -5,3 +5,31 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+.sekuya-regular {
+  font-family: "Sekuya", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* <weight>: Use a value from 300 to 900
+ <uniquifier>: Use a unique and descriptive class name */
+
+.merriweather {
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+body {
+    height: 100vh;
+    background: black url(../imagens/GIF/Estrelas-subindo.mp4) no-repeat;
+    background-size: cover;
+}
+
+nav h1 {
+    color: white;
+}
