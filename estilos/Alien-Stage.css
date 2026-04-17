@@ -23,7 +23,7 @@ body {
 }
 
 main {
-    background: black url(../imagens/Sua.jpg) no-repeat;
+    background: black url(../imagens/Sua.jpg) center center no-repeat;
     background-size: cover;
     height: 50vh;
     border-radius: 10px;
@@ -34,7 +34,7 @@ section {
     flex-flow: column nowrap;
     justify-self: center;
     align-items: center;
-    width: 500px;
+    width: 400px;
 }
 
 h2 {
