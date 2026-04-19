@@ -19,8 +19,7 @@
 }
 
 body {
-    background: black url(../imagens/GIF/Sakura\ Effect\ 2.gif) no-repeat;
-    background-size: cover;
+    background-color: black;
     height: 70vh;
     color: white;
     display: grid;
