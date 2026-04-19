@@ -27,6 +27,16 @@ main {
     background-size: cover;
     height: 50vh;
     border-radius: 10px;
+    animation: bg-pan-tl 10s alternate both infinite;
+}
+
+@keyframes bg-pan-tl {
+  0% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
 }
 
 section {
@@ -39,17 +49,31 @@ section {
 
 h2 {
     color: white;
-    margin-left: 5%;
+    white-space: wrap;
+    overflow: hidden;
     text-align: center;
+    margin-left: 5%;
     font-size: 1.3em;
+    animation: slide-in-fwd-center 5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-fwd-center {
+  0% {
+    transform: translateZ(-1400px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
 }
 
 #botoes {
     content: '';
 }
 
-
 button {
+  animation: slide-top 2.5s 6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both, text-focus-in 1s 6s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
   position: relative;
   padding: 10px 20px;
   border-radius: 7px;
@@ -120,4 +144,31 @@ button:active {
   -webkit-transition: box-shadow 0.2s ease-in;
   -moz-transition: box-shadow 0.2s ease-in;
   transition: box-shadow 0.2s ease-in;
+}
+
+@keyframes slide-top {
+  0% {
+      transform: translateY(100px);
+      display: none;
+  }
+  100% {
+      transform: translateY(0px);
+  }
+}
+
+@keyframes text-focus-in {
+  0% {
+      filter: blur(12px);
+      opacity: 0;
+  }
+
+  50% {
+      filter: blur(6px);
+      opacity: 0.5;
+  }
+
+  100% {
+      filter: blur(0px);
+      opacity: 1;
+  }
 }

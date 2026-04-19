@@ -1,0 +1,178 @@
+@charset "UTF-8";
+
+.sekuya-regular {
+    font-family: "Sekuya", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* <weight>: Use a value from 300 to 900
+<uniquifier>: Use a unique and descriptive class name */
+
+.merriweather {
+    font-family: "Merriweather", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+}
+
+body {
+    background: black url(../imagens/GIF/Sakura\ Effect\ 2.gif) no-repeat;
+    background-size: cover;
+    height: 70vh;
+    color: white;
+    display: grid;
+    place-items: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 400px;
+}
+
+img {
+    width: 400px;
+}
+
+img#gato {
+    width: 200px;
+    animation: slide-down 6s 500ms ease both;
+}
+
+@keyframes slide-down {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(70px);
+    }
+
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.3em;
+    animation: slide-in-fwd-center 5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-fwd-center {
+  0% {
+    transform: translateZ(-1400px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+button {
+    animation: slide-top 2.5s 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both, text-focus-in 1s 3s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    margin-top: 20px;
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: 1px solid rgb(255, 61, 245);
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: transparent;
+    color: #fff;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+button:hover {
+    background: rgb(255, 61, 245);
+    box-shadow: 0 0 30px 5px rgb(223, 53, 214);
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+button:hover::before {
+    -webkit-animation: sh02 0.5s 0s linear;
+    -moz-animation: sh02 0.5s 0s linear;
+    animation: sh02 0.5s 0s linear;
+}
+
+button::before {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+}
+
+@keyframes sh02 {
+    from {
+    opacity: 0;
+    left: 0%;
+    }
+
+    50% {
+    opacity: 1;
+    }
+
+    to {
+    opacity: 0;
+    left: 100%;
+    }
+}
+
+button:active {
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: box-shadow 0.2s ease-in;
+    -moz-transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
+}
+
+@keyframes slide-top {
+  0% {
+      transform: translateY(100px);
+      display: none;
+  }
+  100% {
+      transform: translateY(0px);
+  }
+}
+
+@keyframes text-focus-in {
+  0% {
+      filter: blur(12px);
+      opacity: 0;
+  }
+
+  50% {
+      filter: blur(6px);
+      opacity: 0.5;
+  }
+
+  100% {
+      filter: blur(0px);
+      opacity: 1;
+  }
+}
