@@ -67,3 +67,7 @@ tracking-in-contract {
     opacity: 1;
   }
 }
+
+a {
+  text-decoration: none;
+}

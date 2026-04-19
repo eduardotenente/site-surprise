@@ -68,6 +68,10 @@ h2 {
   }
 }
 
+a {
+  text-decoration: none;
+}
+
 #botoes {
     content: '';
 }
