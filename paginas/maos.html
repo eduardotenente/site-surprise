@@ -21,13 +21,36 @@
     <section>
         <h2 class="sekuya-regular">Nem a morte irá nos separar, pois nossas almas se fundiram! Não importa onde eu ou você vá... Nós sempre estaremos um com o outro.</h2>
         <div id="botoes">
-            <a href="Mizi.html" target="_self" rel="internal">
+            <a href="Mizi.html" target="_self" rel="prev">
                 <button id="voltar" class="merriweather">Voltar</button>
             </a>
-            <a href="coraçao.html" target="_self" rel="internal">
+            <a href="coraçao.html" target="_self" rel="next">
                 <button id="avançar" class="merriweather">Próximo</button>
             </a>
+            <audio id="meuAudio" autoplay muted>
+                <source src="../audio/ALIEN_STAGE_OFFICAL_MUSIC_-_KARMA_Luka_Hyuna.ver_-_VIVINOS_ALNST_(SkySound.cc).mp3" type="audio/mp3">
+            </audio>
         </div>
     </section>
+
+    <script>
+        const audio = document.getElementById("meuAudio");
+        const inicio = 50;
+        const fim = 100;
+        audio.addEventListener("loadedmetadata", () => {
+        audio.currentTime = inicio
+
+        function controlarFim() {
+            if (audio.currentTime >= fim) {
+            audio.pause();
+            audio.removeEventListener("timeupdate", controlarFim);
+            }
+        }
+        audio.addEventListener("timeupdate", controlarFim);
+
+        // Tenta desmutar depois de iniciar
+        audio.muted = false;
+        });
+    </script>
 </body>
 </html>

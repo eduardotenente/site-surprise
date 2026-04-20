@@ -15,13 +15,36 @@
     <section>
         <h2 class="sekuya-regular">Você é fascinante desde a primeira vez que a vi, me sinto vivo em sua presença!</h2>
         <div id="botoes">
-            <a href="Menu.html" target="_self" rel="internal">
+            <a href="Menu.html" target="_self" rel="prev">
                 <button id="voltar" class="merriweather">Voltar</button>
             </a>
-            <a href="Mizi.html" target="_self" rel="internal">
+            <a href="Mizi.html" target="_self" rel="next">
                 <button id="avançar" class="merriweather">Próximo</button>
             </a>
+            <audio id="meuAudio" autoplay muted>
+                <source src="../audio/ALIEN_STAGE_OFFICAL_MUSIC_-_KARMA_Luka_Hyuna.ver_-_VIVINOS_ALNST_(SkySound.cc).mp3" type="audio/mp3">
+            </audio>
         </div>
     </section>
+
+        <script>
+        const audio = document.getElementById("meuAudio");
+        const inicio = 1;
+        const fim = 25;
+        audio.addEventListener("loadedmetadata", () => {
+        audio.currentTime = inicio
+
+        function controlarFim() {
+            if (audio.currentTime >= fim) {
+            audio.pause();
+            audio.removeEventListener("timeupdate", controlarFim);
+            }
+        }
+        audio.addEventListener("timeupdate", controlarFim);
+
+        // Tenta desmutar depois de iniciar
+        audio.muted = false;
+        });
+    </script>
 </body>
 </html>
