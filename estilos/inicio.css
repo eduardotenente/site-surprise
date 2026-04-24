@@ -66,6 +66,10 @@ h1 {
   }
 }
 
+div#entrada {
+  animation: slide-top 4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both, text-focus-in 1.5s 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
 a {
   text-decoration: none;
 }
@@ -244,5 +248,32 @@ strong {
   100% {
     transform: scale(0.75);
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes slide-top {
+  0% {
+      transform: translateY(100px);
+      display: none;
+  }
+  100% {
+      transform: translateY(0px);
+  }
+}
+
+@keyframes text-focus-in {
+  0% {
+      filter: blur(12px);
+      opacity: 0;
+  }
+
+  50% {
+      filter: blur(6px);
+      opacity: 0.5;
+  }
+
+  100% {
+      filter: blur(0px);
+      opacity: 1;
   }
 }
