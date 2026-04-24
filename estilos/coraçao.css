@@ -39,13 +39,22 @@ section {
     padding-bottom: 20px;
 }
 
-section iframe {
+iframe {
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.603);
+    animation: slide-down 6s 500ms ease both;
+    transition: transform 0.5s;
+    &:hover {
+      transform: scale(0.97);
+    }
 }
 
 img {
     width: 400px;
+}
+
+div#gif {
+    display: none;
 }
 
 img#gato {

@@ -27,7 +27,12 @@ main {
     background-size: cover;
     height: 50vh;
     border-radius: 10px;
-    animation: bg-pan-tl 20s alternate both infinite;
+    animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both, bg-pan-tl 20s 700ms alternate both infinite;
+    transition: transform .5s;
+
+    &:hover {
+      transform: scale(0.97);
+    }
 }
 
 @keyframes bg-pan-tl {
@@ -54,7 +59,7 @@ h2 {
     text-align: center;
     margin-left: 5%;
     font-size: 1.3em;
-    animation: slide-in-fwd-center 5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-fwd-center 5s 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 @keyframes slide-in-fwd-center {
