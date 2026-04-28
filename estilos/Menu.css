@@ -41,11 +41,6 @@ nav h1 {
     animation: tracking-in-contract 1.4s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
-tracking-in-contract {
-	-webkit-animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-	animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-}
-
 @keyframes tracking-in-contract {
   0% {
     letter-spacing: 1em;
