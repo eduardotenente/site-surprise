@@ -44,6 +44,29 @@
                 Parte 2!
             </button>
         </a>
+        <audio id="Lilacs" autoplay muted>
+            <source src="../audio/LILACS_-_PASTEL_GHOST_sped_up_mp3.mp3" type="audio/mp3">
+        </audio>
     </div>
+
+    <script>
+        const audio = document.getElementById("Lilacs");
+        const inicio = 1;
+        const fim = 28;
+        audio.addEventListener("loadedmetadata", () => {
+        audio.currentTime = inicio
+
+        function controlarFim() {
+            if (audio.currentTime >= fim) {
+            audio.pause();
+            audio.removeEventListener("timeupdate", controlarFim);
+            }
+        }
+        audio.addEventListener("timeupdate", controlarFim);
+
+        // Tenta desmutar depois de iniciar
+        audio.muted = false;
+        });
+    </script>
 </body>
 </html>

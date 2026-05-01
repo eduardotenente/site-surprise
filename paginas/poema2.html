@@ -21,6 +21,15 @@
             font-size: 1.1em;
             text-shadow: 1px 1px 1px black;
         }
+
+        button#voltar {
+            border-color: rgb(255, 61, 119);
+
+            &:hover {
+                background: rgb(255, 61, 119);
+                box-shadow: 0 0 30px 8px rgba(236, 0, 79, 0.815);
+            }
+        }
     </style>
 </head>
 <body>
@@ -36,18 +45,45 @@
         </section>
     </main>
     <div id="botoes">
-        <a href="poema.html" target="_self" rel="prev">
-            <button id="voltar" class="merriweather">
-                <span class="material-symbols-outlined">
-                    arrow_top_left
-                </span> Voltar
-            </button>
-        </a>
-        <a href="poema3.html" target="_self" rel="next">
-            <button id="avançar" class="merriweather">
-                Parte 3
-            </button>
-        </a>
+        <abbr title="Eu!">
+            <a href="poema.html" target="_self" rel="prev">
+                <button id="voltar" class="merriweather">
+                    <span class="material-symbols-outlined">
+                        arrow_top_left
+                    </span> Voltar
+                </button>
+            </a>
+        </abbr>
+        <abbr title="Você!">
+            <a href="poema3.html" target="_self" rel="next">
+                <button id="avançar" class="merriweather">
+                    Parte 3
+                </button>
+            </a>
+        </abbr>
+        <audio id="Lilacs" autoplay muted>
+            <source src="../audio/LILACS_-_PASTEL_GHOST_sped_up_mp3.mp3" type="audio/mp3">
+        </audio>
     </div>
+
+    <script>
+        const audio = document.getElementById("Lilacs");
+        const inicio = 28;
+        const fim = 55;
+        audio.addEventListener("loadedmetadata", () => {
+        audio.currentTime = inicio
+
+        function controlarFim() {
+            if (audio.currentTime >= fim) {
+            audio.pause();
+            audio.removeEventListener("timeupdate", controlarFim);
+            }
+        }
+        audio.addEventListener("timeupdate", controlarFim);
+
+        // Tenta desmutar depois de iniciar
+        audio.muted = false;
+        });
+    </script>
 </body>
 </html>

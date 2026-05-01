@@ -16,13 +16,16 @@
             margin-top: 5%;
             margin-bottom: 0px;
         }
+
         h2 {
             font-size: 1.1em;
         }
+
         img {
             width: 430px;
             height: 300px;
         }
+
         @keyframes slide-top {
             0% {
                 transform: translateY(100px);
@@ -32,6 +35,15 @@
                 transform: translateY(-80px);
             }
         }
+
+        button#avançar {
+            border-color: rgb(255, 61, 119);
+
+            &:hover {
+                background: rgb(255, 61, 119);
+                box-shadow: 0 0 30px 8px rgba(236, 0, 79, 0.815);
+            }
+        }
     </style>
 </head>
 <body>
@@ -39,14 +51,16 @@
         <h1>Parte 4!</h1>
     </header>
     <main>
-        <img src="../imagens/GIF-Imagens-Poema/parte4.gif" alt="Homem e Mulher no Espaço">
+        <abbr title="Nós no Espaço-Tempo!"><img src="../imagens/GIF-Imagens-Poema/parte4.gif" alt="Homem e Mulher no Espaço"></abbr>
         <section id="parte4">
             <h2>Te vejo brilhante</h2>
             <h2>Tu és fascinante.</h2>
             <h2>Além do tempo, estamos nós</h2>
             <h2>No espaço - tempo, a sós.</h2>
             <br>
-            <p>- S.N</p>
+            <abbr title="Shiiiryu / Nana">
+                <p>- S.N</p>
+            </abbr>
         </section>
     </main>
     <div id="botoes">
@@ -62,6 +76,29 @@
                 Poema Completo!
             </button>
         </a>
+        <audio id="Lilacs" autoplay muted>
+            <source src="../audio/LILACS_-_PASTEL_GHOST_sped_up_mp3.mp3" type="audio/mp3">
+        </audio>
     </div>
+
+    <script>
+        const audio = document.getElementById("Lilacs");
+        const inicio = 70;
+        const fim = 95;
+        audio.addEventListener("loadedmetadata", () => {
+        audio.currentTime = inicio
+
+        function controlarFim() {
+            if (audio.currentTime >= fim) {
+            audio.pause();
+            audio.removeEventListener("timeupdate", controlarFim);
+            }
+        }
+        audio.addEventListener("timeupdate", controlarFim);
+
+        // Tenta desmutar depois de iniciar
+        audio.muted = false;
+        });
+    </script>
 </body>
 </html>
