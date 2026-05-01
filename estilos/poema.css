@@ -18,7 +18,7 @@
 .merriweather {
   font-family: "Merriweather", serif;
   font-optical-sizing: auto;
-  font-weight: 300;
+  font-weight: 700;
   font-style: normal;
   font-variation-settings:
     "wdth" 100;
@@ -75,10 +75,13 @@ h1 {
 
 h1, h2 {
   font-family: 'Sekuya';
+  text-align: center;
 }
 
 h2 {
   font-size: 1.4em;
+  white-space: wrap;
+  overflow: hidden;
 }
 
 @keyframes slide-in-fwd-center {
@@ -142,22 +145,16 @@ button {
   color: #fff;
   overflow: hidden;
   box-shadow: 0 0 0 0 transparent;
-  -webkit-transition: all 0.2s ease-in;
-  -moz-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
 
 button:hover {
   background: rgb(61, 106, 255);
   box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
 
 button:hover::before {
-  -webkit-animation: sh02 0.5s 0s linear;
-  -moz-animation: sh02 0.5s 0s linear;
   animation: sh02 0.5s 0s linear;
 }
 
@@ -172,10 +169,6 @@ button::before {
   opacity: 0;
   background: #fff;
   box-shadow: 0 0 50px 30px #fff;
-  -webkit-transform: skewX(-20deg);
-  -moz-transform: skewX(-20deg);
-  -ms-transform: skewX(-20deg);
-  -o-transform: skewX(-20deg);
   transform: skewX(-20deg);
 }
 
@@ -197,8 +190,6 @@ button::before {
 
 button:active {
   box-shadow: 0 0 0 0 transparent;
-  -webkit-transition: box-shadow 0.2s ease-in;
-  -moz-transition: box-shadow 0.2s ease-in;
   transition: box-shadow 0.2s ease-in;
 }
 
