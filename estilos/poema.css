@@ -27,7 +27,7 @@
 body {
     background: black;
     color: white;
-    height: 100vh;
+    height: 100dvh;
 }
 
 header {
@@ -51,7 +51,7 @@ img {
   transition: transform .5s;
 
     &:hover {
-      transform: scale(0.97);
+      transform: scale(0.95);
     }
 }
 
@@ -78,7 +78,7 @@ h1, h2 {
 }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 1.4em;
 }
 
 @keyframes slide-in-fwd-center {
@@ -117,6 +117,15 @@ div#botoes {
 
 a {
   text-decoration: none;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24;
+  font-size: 1.1em;
 }
 
 button {

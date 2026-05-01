@@ -6,9 +6,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Sekuya&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../estilos/poema.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_top_left"/>
+    <link rel="stylesheet" href="../../estilos/poema.css">
     <title>Poema Completo!</title>
     <style>
+        body {
+            background: black url(../../imagens/GIF-Imagens-Poema/poemacompleto.gif) no-repeat fixed;
+            background-size: cover;
+        }
+
         section {
             display: flex;
             flex-flow: column nowrap;
@@ -21,14 +27,27 @@
             margin-right: 1%;
             margin-bottom: 20px;
         }
+
+        h1, h2, p {
+            text-shadow: 2px 2px 2px black;
+        }
         
         h2 {
-            font-size: 1.2em;
+            font-size: 1.1em;
         }
 
         div#botoes {
             top: 0%;
             padding-bottom: 15px;
+        }
+
+        button {
+            border-color: rgb(255, 61, 119);
+
+            &:hover {
+                background: rgb(255, 61, 119);
+                box-shadow: 0 0 30px 8px rgba(236, 0, 79, 0.815);
+            }
         }
     </style>
 </head>
@@ -67,7 +86,9 @@
     <div id="botoes">
         <a href="Menu.html" target="_self" rel="prev">
             <button id="voltar" class="merriweather">
-                <-- Voltar
+                <span class="material-symbols-outlined">
+                arrow_top_left
+                </span> Voltar
             </button>
         </a>
 </body>
