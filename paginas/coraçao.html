@@ -21,9 +21,29 @@
     </div>
     <div id="gif">
       <img src="../imagens/GIF/_3.gif" alt="Gatinho dançando" id="gato">
+        <audio id="ILoveYou" autoplay muted>
+            <source src="../audio/i_love_u.mp3">
+        </audio>
     </div>
-    <section>
-        <iframe width="100%" height="200" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2061156780&color=%237386cc&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/wivmusic" title="wiv" target="_blank" style="color: #cccccc; text-decoration: none;">wiv</a> · <a href="https://soundcloud.com/wivmusic/i-love-u" title="i love u." target="_blank" style="color: #cccccc; text-decoration: none;">i love u.</a></div>
-    </section>
+    
+    <script>
+        const audio = document.getElementById("ILoveYou");
+        const inicio = 1;
+        const fim = 124;
+        audio.addEventListener("loadedmetadata", () => {
+        audio.currentTime = inicio
+
+        function controlarFim() {
+            if (audio.currentTime >= fim) {
+            audio.pause();
+            audio.removeEventListener("timeupdate", controlarFim);
+            }
+        }
+        audio.addEventListener("timeupdate", controlarFim);
+
+        // Tenta desmutar depois de iniciar
+        audio.muted = false;
+        });
+    </script>
 </body>
 </html>
