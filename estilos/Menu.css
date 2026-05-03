@@ -39,7 +39,7 @@ nav {
 
 nav h1 {
     color: white;
-    animation: tracking-in-contract 2.5s 5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: tracking-in-contract 2.5s 4s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
 @keyframes scale-in-ver-top {
@@ -84,7 +84,7 @@ section {
 section iframe {
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.651);
-  animation: slide-top 2.5s 8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both, text-focus-in 2s 10s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation: slide-top 2.5s 7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both, text-focus-in 2s 9s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
   transition: transform 0.5s ease-in-out;
     &:hover {
       transform: scale(0.97);

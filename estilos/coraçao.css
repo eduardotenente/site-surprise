@@ -38,12 +38,9 @@ img {
     width: 400px;
 }
 
-div#gif {
-    display: none;
-}
-
 img#gato {
     width: 200px;
+    border-radius: 10px;
     animation: slide-down 6s 500ms ease both;
 }
 
