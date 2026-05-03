@@ -43,11 +43,11 @@ main {
 
 .scroll-content {
     display: flex;
-    animation: scroll 25s linear infinite;
+    animation: scroll 22s linear infinite;
 }
 
 .scroll-content-invert {
-    animation: scroll-invert 25s linear infinite;
+    animation: scroll-invert 22s linear infinite;
 }
 
 img {
