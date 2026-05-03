@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+.sekuya-regular {
+  font-family: "Sekuya", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.merriweather {
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+html, body {
+    scroll-behavior: smooth;
+    background-color: black;
+}
+
+header {
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2em;
+}
+
+main {
+    margin-top: 20px;
+}
+
+.scroll-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    display: flex;
+}
+
+.scroll-content {
+    display: flex;
+    animation: scroll 25s linear infinite;
+}
+
+.scroll-content-invert {
+    animation: scroll-invert 25s linear infinite;
+}
+
+img {
+    width: 250px;
+    height: 250px;
+    margin-right: 10px;
+    border-radius: 10px;
+    transition: transform 0.5s ease-in-out;
+    &:hover {
+      transform: scale(0.94);
+    }
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes scroll-invert {
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}

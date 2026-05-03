@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Sekuya&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../estilos/Midia.css">
+    <link rel="shortcut icon" href="../imagens/favicon_io/favicon.ico" type="image/x-icon">
+    <title>Galeria!</title>
+</head>
+<body>
+    <header id="Mizi-Sua">
+        <h1 class="sekuya-regular">Mizi & Sua</h1>
+    </header>
+    <main class="scroll-container">
+        <article class="scroll-content" id="scrollContent">
+            <img src="../imagens/GIF-Imagens-Galeria/mizi/mizi-canto.gif" alt="Mizi Cantando" style="width: 350px;">
+            <img src="../imagens/GIF-Imagens-Galeria/mizi/Mizi-contente.jpg" alt="Mizi contente">
+            <img src="../imagens/GIF-Imagens-Galeria/mizi/mizi-kid-2.jpg" alt="Mizi criança">
+            <img src="../imagens/GIF-Imagens-Galeria/mizi/mizi-kid.gif" alt="Mizi criança gif" style="width: 350px;">
+            <img src="../imagens/GIF-Imagens-Galeria/mizi/Mizi pfp.jpg" alt="Mizi estendendo a mão">
+        </article>
+    </main>
+    <main class="scroll-container">
+        <article class="scroll-content-invert" id="scrollContent-2">
+            <img src="../imagens/GIF-Imagens-Galeria/sua/Sua-canto-img.jpg" alt="Sua Cantando Imagem">
+            <img src="../imagens/GIF-Imagens-Galeria/sua/Sua-pfp.jpg" alt="Sua Sorrindo">
+            <img src="../imagens/GIF-Imagens-Galeria/sua/sua-sorrindo.jpg" alt="Sua Sorrindo Roxo">
+            <img src="../imagens/GIF-Imagens-Galeria/sua/Sua-canto.gif" alt="Sua Cantando GIF" style="width: 350px;">
+            <img src="../imagens/GIF-Imagens-Galeria/sua/Sua-escola.jpg" alt="Sua Escolar">
+        </article>
+    </main>
+    <!---------------------------------------------------------------------------->
+    <header>
+        <h1 class="sekuya-regular">Scott & Ramona</h1>
+    </header>
+    <main class="scroll-container">
+        <article class="scroll-content" id="scrollContent1-2">
+            <img src="../imagens/GIF-Imagens-Galeria/ramona/Ramona Flowers Pfp.jpg" alt="Ramona sentada">
+            <img src="../imagens/GIF-Imagens-Galeria/ramona/ramona-gif.gif" alt="Ramona Brilhante GIF">
+            <img src="../imagens/GIF-Imagens-Galeria/ramona/Ramona Flowers.jpg" alt="Ramona Sorrindo">
+            <img src="../imagens/GIF-Imagens-Galeria/ramona/ramona-live-action.jpg" alt="Ramona Vida Real">
+            <img src="../imagens/GIF-Imagens-Galeria/ramona/Ramona Flowers Icon.jpg" alt="Ramona ícone rosa">
+        </article>
+    </main>
+    <main class="scroll-container">
+        <article class="scroll-content-invert" id="scrollContentScott">
+            <img src="../imagens/GIF-Imagens-Galeria/scott/Scott Pilgrim.jpg" alt="">
+            <img src="../imagens/GIF-Imagens-Galeria/scott/Scott.jpg" alt="">
+            <img src="../imagens/GIF-Imagens-Galeria/scott/scott-live-action.jpg" alt="">
+            <img src="../imagens/GIF-Imagens-Galeria/scott/scott-gif.gif" alt="">
+            <img src="../imagens/GIF-Imagens-Galeria/scott/🍎 ‧₊˚ ✶ ⋅Scott Pilgrim.jpg" alt="">
+        </article>
+    </main>
+
+    <script>
+        const scrollContent = document.getElementById('scrollContent')
+        const scrollContentSua = document.getElementById('scrollContent-2')
+        const scrollContentRamona = document.getElementById('scrollContent1-2')
+        const scrollContentScott = document.getElementById('scrollContentScott')
+
+        const images = scrollContent.innerHTML
+        const imagesSua = scrollContentSua.innerHTML
+        const imagesRamona = scrollContentRamona.innerHTML
+        const imagesScott = scrollContentScott.innerHTML
+
+        scrollContent.innerHTML += images //Duplica imagens
+        scrollContentSua.innerHTML += imagesSua 
+        scrollContentRamona.innerHTML += imagesRamona
+        scrollContentScott.innerHTML += imagesScott
+    </script>
+</body>
+</html>
