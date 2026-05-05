@@ -74,6 +74,7 @@ h1 {
 }
 
 h1, h2 {
+  user-select: none;
   font-family: 'Sekuya';
   text-align: center;
 }
