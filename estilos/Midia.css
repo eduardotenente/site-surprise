@@ -29,10 +29,33 @@ h1 {
     text-align: center;
     font-size: 2em;
     letter-spacing: 2px;
+    text-shadow: 2px 2px 2px black;
+    margin-left: 2%;
+}
+
+.capa {
+    background: black url(../imagens/GIF-Imagens-Galeria/capas/Mizi\ x\ Sua.gif) no-repeat;
+    height: 275px;
+    display: flex;
+    align-items: flex-end;
+    border-radius: 5px;
+}
+
+#scott-ramona {
+    background-image: url(../imagens/GIF-Imagens-Galeria/capas/Ramona\ x\ Scott\ gif.gif);
+}
+
+#sawako-kazehaya {
+    background-image: url(../imagens/GIF-Imagens-Galeria/capas/sawako\ x\ kazehaya.gif);
+}
+
+#nana {
+    background: url(../imagens/GIF-Imagens-Galeria/capas/Nana\ cute\ x\ Nana\ Rock.jpg) center center;
+    background-size: cover;
 }
 
 main {
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .scroll-container {
@@ -63,6 +86,16 @@ img {
     }
 }
 
+#welcome, #borda, #ByeBye {
+    width: 467px;
+    transform: none;
+    transition: none;
+}
+
+#borda {
+    height: 140px;
+}
+
 @keyframes scroll {
     from {
         transform: translateX(1%);
@@ -81,4 +114,113 @@ img {
     to {
         transform: translateX(1%);
     }
+}
+
+div {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    cursor: pointer;
+    animation: slide-top 2.5s 8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both, text-focus-in 2s 8s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    margin-top: 20px;
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: 1px solid rgb(255, 61, 245);
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: transparent;
+    color: #fff;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+button:hover {
+    background: rgb(255, 61, 245);
+    box-shadow: 0 0 30px 5px rgb(223, 53, 214);
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+button:hover::before {
+    -webkit-animation: sh02 0.5s 0s linear;
+    -moz-animation: sh02 0.5s 0s linear;
+    animation: sh02 0.5s 0s linear;
+}
+
+button::before {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+}
+
+@keyframes sh02 {
+    from {
+    opacity: 0;
+    left: 0%;
+    }
+
+    50% {
+    opacity: 1;
+    }
+
+    to {
+    opacity: 0;
+    left: 100%;
+    }
+}
+
+button:active {
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: box-shadow 0.2s ease-in;
+    -moz-transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
+}
+
+@keyframes slide-top {
+  0% {
+      transform: translateY(100px);
+      display: none;
+  }
+  100% {
+      transform: translateY(0px);
+  }
+}
+
+@keyframes text-focus-in {
+  0% {
+      filter: blur(12px);
+      opacity: 0;
+  }
+
+  50% {
+      filter: blur(6px);
+      opacity: 0.5;
+  }
+
+  100% {
+      filter: blur(0px);
+      opacity: 1;
+  }
 }
