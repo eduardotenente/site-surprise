@@ -34,7 +34,7 @@ h1 {
 }
 
 .capa {
-    background: black url(../imagens/GIF-Imagens-Galeria/capas/Mizi\ x\ Sua.gif) no-repeat;
+    background: black url(../imagens/GIF-Imagens-Galeria/capas/Mizi\ x\ Sua.gif) center center no-repeat;
     height: 275px;
     display: flex;
     align-items: flex-end;
@@ -87,7 +87,7 @@ img {
 }
 
 #welcome, #borda, #ByeBye {
-    width: 467px;
+    width: 430px;
     transform: none;
     transition: none;
 }
