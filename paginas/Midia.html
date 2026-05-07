@@ -11,6 +11,12 @@
     <title>Galeria!</title>
 </head>
 <body>
+    <menu>
+        <a href="#Mizi-Sua" class="menu">Mizi & Sua</a>
+        <a href="#Ramona-Scott" class="menu">Ramona & Scott</a>
+        <a href="#Sawako-kazehaya" class="menu">Sawako & Kazehaya</a>
+        <a href="#Nana" class="menu">Nana & Hachi</a>
+    </menu>
     <img src="../imagens/GIF-Imagens-Galeria/imagens-padroes/welcome.jpg" alt="Bem-Vindo!" id="welcome">
     <header id="Mizi-Sua">
         <nav class="capa">
@@ -37,7 +43,7 @@
     </main>
     <img src="../imagens/GIF-Imagens-Galeria/imagens-padroes/borda.jpg" alt="Borda" id="borda">
     <!---------------------------------------------------------------------------->
-    <header>
+    <header id="Ramona-Scott">
         <nav class="capa" id="scott-ramona">
             <h1 class="sekuya-regular">Scott & Ramona!</h1>
         </nav>
@@ -62,7 +68,7 @@
     </main>
     <img src="../imagens/GIF-Imagens-Galeria/imagens-padroes/borda.jpg" alt="Borda" id="borda">
     <!---------------------------------------------------------------------------->
-    <header>
+    <header id="Sawako-kazehaya">
         <nav class="capa" id="sawako-kazehaya">
             <h1 class="sekuya-regular">Sawako & Kazehaya!</h1>
         </nav>
@@ -87,7 +93,7 @@
     </main>
     <img src="../imagens/GIF-Imagens-Galeria/imagens-padroes/borda.jpg" alt="Borda" id="borda">
     <!---------------------------------------------------------------------------->
-    <header>
+    <header id="Nana">
         <nav class="capa" id="nana">
             <h1 class="sekuya-regular">Nana's!</h1>
         </nav>
@@ -121,6 +127,18 @@
     <img src="../imagens/GIF-Imagens-Galeria/imagens-padroes/bye-bye.jpg" alt="Tchau!" id="ByeBye">
 
     <script>
+        const myObserver = new IntersectionObserver( (entries) => {
+            entries.forEach( (entry) => {
+                if (entry.isIntersecting){
+                    entry.target.classList.add('show')
+                } else {
+                    entry.target.classList.remove('show')
+                }
+            })
+        })
+        const elements = document.querySelectorAll('.scroll-container')
+        elements.forEach( (element) => myObserver.observe(element))
+
         const scrollContent = document.getElementsByClassName('scrollContent');
         const images = scrollContent.innerHTML;
         scrollContent.innerHTML += images; //Duplica imagens
@@ -130,7 +148,6 @@
         const fim = 174;
         audio.addEventListener("loadedmetadata", () => {
         audio.currentTime = inicio
-
         function controlarFim() {
             if (audio.currentTime >= fim) {
             audio.pause();
@@ -138,7 +155,6 @@
             }
         }
         audio.addEventListener("timeupdate", controlarFim);
-
         // Tenta desmutar depois de iniciar
         audio.muted = false;
         });

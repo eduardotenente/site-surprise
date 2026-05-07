@@ -17,7 +17,49 @@
 
 html, body {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
     background-color: black;
+    padding-top: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: #af43d6;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #040305;
+    border-radius: 10px;
+}
+
+menu {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    width: 92%;
+    background-color: rgba(0, 0, 0, 0.692);
+    height: 70px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.432);
+}
+
+a.menu {
+    text-decoration: none;
+    color: white;
+    font-family: "Merriweather", serif;
+    font-size: 1.2em;
+    text-align: center;
+    transition: border-bottom 1s ease;
+    &:hover {
+        border-bottom: 1px solid rgb(129, 126, 126);
+        transition: all 1s;
+    }
 }
 
 header {
@@ -59,12 +101,23 @@ main {
     margin-top: 30px;
 }
 
+
 .scroll-container {
     width: 100%;
     overflow: hidden;
     white-space: nowrap;
     position: relative;
     display: flex;
+    opacity: 0;
+    filter: blur(15px);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transition: all 1s;
+    transform: translateX(0);
 }
 
 .scroll-content {
