@@ -164,6 +164,20 @@ h1 {
     align-items: flex-end;
     border-radius: 5px;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.479);
+    animation: fade-in-fwd 3s 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@keyframes fade-in-fwd {
+  0% {
+    -webkit-transform: translateZ(-80px);
+    transform: translateZ(-80px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
 }
 
 #scott-ramona {
