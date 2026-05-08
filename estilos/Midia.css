@@ -17,9 +17,9 @@
 
 html, body {
     scroll-behavior: smooth;
+    background: black url(../imagens/GIF/kuwapo\ on\ ig.gif) no-repeat fixed;
     scroll-padding-top: 80px;
-    background-color: black;
-    padding-top: 10px;
+    min-height: 100%;
 }
 
 ::-webkit-scrollbar {
@@ -39,40 +39,121 @@ menu {
     position: sticky;
     top: 0;
     z-index: 9999;
-    width: 92%;
-    background-color: rgba(0, 0, 0, 0.692);
+    width: 95%;
     height: 70px;
+    margin-left: -2%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.432);
+    background-color: rgba(0, 0, 0, 0.692);
+    backdrop-filter: saturate(180%) blur(20px);
+    box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+    border: 1.5px solid rgba(255, 255, 255, 0.18);
+    animation: scale-in-ver-top 2.5s 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes scale-in-ver-top {
+  0% {
+    transform: scaleY(0);
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(1);
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+}
+
+ul {
+    margin-left: -10%;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+ul > li {
+    list-style-type: none;
 }
 
 a.menu {
     text-decoration: none;
     color: white;
     font-family: "Merriweather", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
     font-size: 1.2em;
     text-align: center;
+    animation: fadeup 1s 3.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
     transition: border-bottom 1s ease;
     &:hover {
         border-bottom: 1px solid rgb(129, 126, 126);
         transition: all 1s;
     }
+    
 }
 
-header {
-    color: white;
+@keyframes fadeup {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#bem-vindo-container {
+    display: inline-block;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 100%;
 }
 
 h1 {
+    color: white;
     user-select: none;
     text-align: center;
     font-size: 2em;
     letter-spacing: 2px;
     text-shadow: 2px 2px 2px black;
     margin-left: 2%;
+}
+
+.welcome {
+    font-family: "Sekuya", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.9em;
+    text-align: center;
+    overflow: hidden;
+    font-weight: 700;
+    border-right: 0.15rem solid orange;
+    white-space: nowrap;
+    animation: typing 3s steps(30, end);
+}
+
+#postyping {
+    animation: fadeup 2s 4s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    border-right: none;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+
+    to {
+        width: 100%;
+        opacity: 1;
+    }
 }
 
 .capa {
@@ -82,6 +163,7 @@ h1 {
     display: flex;
     align-items: flex-end;
     border-radius: 5px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.479);
 }
 
 #scott-ramona {
@@ -130,10 +212,12 @@ main {
 }
 
 img {
+    object-fit: cover;
     width: 250px;
     height: 250px;
     margin-right: 10px;
     border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.479);
     image-rendering: optimizeQuality;
     transition: transform 0.5s ease-in-out;
     &:hover {
@@ -141,8 +225,9 @@ img {
     }
 }
 
-#welcome, #borda, #ByeBye {
-    width: 420px;
+#borda {
+    width: 417px;
+    border-radius: none;
     transform: none;
     transition: none;
 }
