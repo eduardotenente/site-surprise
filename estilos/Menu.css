@@ -1,11 +1,5 @@
 @charset "UTF-8";
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
 .sekuya-regular {
   font-family: "Sekuya", system-ui;
   font-weight: 400;
@@ -24,12 +18,18 @@
     "wdth" 100;
 }
 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
     height: 100dvh;
     background: black url(../imagens/GIF/viagem.gif) center center no-repeat fixed;
     background-size: cover;
     text-align: center;
-}
+  }
 
 nav {
   background-color: rgba(0, 0, 0, 0.425);
@@ -78,20 +78,6 @@ main {
   animation: slide-top 2.5s 6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both, text-focus-in 2s 7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
 
-section {
-  margin-top: 5%;
-}
-
-section iframe {
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.651);
-  animation: slide-top 2.5s 7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both, text-focus-in 2s 9s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-  transition: transform 0.5s ease-in-out;
-    &:hover {
-      transform: scale(0.97);
-    }
-}
-
 @keyframes slide-top {
   0% {
       transform: translateY(100px);
@@ -123,11 +109,48 @@ a {
   text-decoration: none;
 }
 
+#retorno {
+  opacity: 0;
+}
+
 button {
   margin-top: 10%;
   &:hover {
     transform: scale(0.9);
   }
+}
+
+.btn-github {
+  cursor: pointer;
+  display: flex;
+  margin: 10% auto 0 auto;
+  gap: 0.5rem;
+  border: none;
+
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  animation: tracking-in-contract 2.5s 7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  border-radius: 100px;
+  font-weight: 800;
+  place-content: center;
+
+  padding: 0.75rem 1rem;
+  font-size: 0.825rem;
+  line-height: 1rem;
+
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow:
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.04),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+  color: #fff;
+}
+
+.btn-github:hover {
+  box-shadow:
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.08),
+    inset 0 0 0 1px rgba(252, 232, 3, 0.08);
+  color: #fce803;
+  transform: translate(0, -0.25rem);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 #botao-fundo {
@@ -348,4 +371,17 @@ button {
     transform: scale(1.25) translateY(-15px);
     transform-origin: top;
   }
+}
+
+@keyframes circle-out-center {
+  from {
+    clip-path: circle(0%);
+  }
+  to {
+    clip-path: circle(125%);
+  }
+}
+
+[transition-style="out:circle:center"] {
+  animation: 2.5s cubic-bezier(.25, 1, .30, 1) circle-out-center both;
 }

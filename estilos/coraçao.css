@@ -41,6 +41,7 @@ img {
 img#gato {
     width: 200px;
     border-radius: 10px;
+    mix-blend-mode: lighten;
     animation: slide-down 6s 500ms ease both;
 }
 

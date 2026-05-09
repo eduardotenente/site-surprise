@@ -69,7 +69,7 @@ menu {
 ul {
     margin-left: -10%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: 100%;
 }
 
@@ -83,16 +83,16 @@ a.menu {
     font-family: "Merriweather", serif;
     font-optical-sizing: auto;
     font-weight: 700;
-    font-style: normal;
+    font-style: italic;
     font-variation-settings:
     "wdth" 100;
-    font-size: 1.2em;
+    font-size: 1em;
     text-align: center;
     animation: fadeup 1s 3.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
     transition: border-bottom 1s ease;
     &:hover {
         border-bottom: 1px solid rgb(129, 126, 126);
-        transition: all 1s;
+        transition: border-bottom 1s;
     }
     
 }
@@ -130,7 +130,7 @@ h1 {
     font-family: "Sekuya", system-ui;
     font-weight: 400;
     font-style: normal;
-    font-size: 1.9em;
+    font-size: 1.7em;
     text-align: center;
     overflow: hidden;
     font-weight: 700;
@@ -264,9 +264,11 @@ img {
 
 #gif-container {
     display: flex;
+    justify-content: space-around;
 }
 
 .gif {
+    width: 150px;
     border-radius: none;
     transform: none;
     transition: none; 
