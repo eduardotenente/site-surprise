@@ -22,17 +22,20 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    user-select: none;
 }
 
 body {
     height: 100dvh;
     background: black url(../imagens/GIF/viagem.gif) center center no-repeat fixed;
+    image-rendering: optimizeQuality;
     background-size: cover;
     text-align: center;
   }
 
 nav {
-  background-color: rgba(0, 0, 0, 0.425);
+  background-color: rgba(0, 0, 0, 0.692);
+  backdrop-filter: saturate(180%) blur(20px);
   padding: 10px;
   animation: scale-in-ver-top 2.5s 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
@@ -40,7 +43,6 @@ nav {
 nav h1 {
     color: white;
     animation: tracking-in-contract 2.5s 4s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-    user-select: none;
 }
 
 @keyframes scale-in-ver-top {
@@ -75,7 +77,7 @@ main {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  animation: slide-top 2.5s 6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both, text-focus-in 2s 7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation: slide-top 2.5s 6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both, text-focus-in 2s 6s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
 
 @keyframes slide-top {
@@ -128,7 +130,7 @@ button {
   border: none;
 
   transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-  animation: tracking-in-contract 2.5s 7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  animation: slide-top 2.5s 6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both, text-focus-in 2s 6s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
   border-radius: 100px;
   font-weight: 800;
   place-content: center;
@@ -382,6 +384,19 @@ button {
   }
 }
 
-[transition-style="out:circle:center"] {
-  animation: 2.5s cubic-bezier(.25, 1, .30, 1) circle-out-center both;
+
+@media screen and (min-width: 580px) {
+  #botao-fundo {
+    margin-top: 1%;
+  }
+
+  .btn-github {
+    margin-top: 5%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  body {
+    background-image: url(../imagens/GIF/minimoss.gif);
+  }
 }
