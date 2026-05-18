@@ -31,6 +31,7 @@ body {
     image-rendering: optimizeQuality;
     background-size: cover;
     text-align: center;
+    transition: .5s;
   }
 
 nav {
