@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+* {
+  user-select: none;
+  box-sizing: border-box;
+}
+
 .sekuya-regular {
   font-family: "Sekuya", system-ui;
   font-weight: 400;
@@ -25,11 +30,11 @@ body {
 main {
     background: black url(../imagens/Sua.jpg) center center no-repeat;
     background-size: cover;
+    margin: auto;
     height: 50vh;
     border-radius: 10px;
     animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both, bg-pan-tl 20s 700ms alternate both infinite;
-    transition: transform .5s;
-
+    transition: transform .5s, width .7s, height .7s;
     &:hover {
       transform: scale(0.97);
     }
@@ -50,6 +55,7 @@ section {
     justify-self: center;
     align-items: center;
     width: 400px;
+    transition: .5s;
 }
 
 h2 {
@@ -57,7 +63,6 @@ h2 {
     white-space: wrap;
     overflow: hidden;
     text-align: center;
-    user-select: none;
     margin-left: 5%;
     font-size: 1.3em;
     animation: slide-in-fwd-center 5s 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -180,5 +185,56 @@ button:active {
   100% {
       filter: blur(0px);
       opacity: 1;
+  }
+}
+
+img {
+  opacity: 0;
+  position: absolute;
+  top: 65%;
+  left: -5%;
+  width: 200px;
+  height: 200px;
+  mix-blend-mode: lighten;
+  transition: .5s;
+}
+
+#Mizi {
+  display: none;
+  opacity: 0;
+  left: 75%;
+  width: 230px;
+  mix-blend-mode: lighten;
+  transition: .5s;
+}
+
+
+@media screen and (min-width: 670px) {
+  main {
+    height: 60vh;
+    width: 650px;
+    animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both, bg-pan-tl 10s 700ms alternate both infinite;
+  }
+
+  section {
+    width: 600px;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  img {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  img {
+    left: 5%;
+  }
+
+  #Mizi {
+    display: block;
+    opacity: 1;
   }
 }
