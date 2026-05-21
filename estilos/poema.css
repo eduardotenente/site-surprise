@@ -80,6 +80,7 @@ h1, h2 {
   user-select: none;
   font-family: 'Sekuya';
   text-align: center;
+  transition: .5s ease-in-out;
 }
 
 h2 {
@@ -221,5 +222,46 @@ button:active {
   100% {
       filter: blur(0px);
       opacity: 1;
+  }
+}
+
+
+
+@media screen and (min-width: 767px) {
+  #parte1 {
+    font-size: 1.3em;
+    width: 500px;
+  }
+
+  h1 {
+    font-size: 2.4em;
+  }
+
+  h1::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 91%;
+    left: 50%;
+    background-color: rgba(255, 255, 255, 0.411);
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out;
+  }
+
+  h1:hover::after {
+      width: 70%;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  h1:hover::after {
+    width: 57%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  h1:hover::after {
+    width: 47%;
   }
 }
