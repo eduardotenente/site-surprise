@@ -31,6 +31,7 @@ body {
     overflow-x: hidden;
     width: 100%;
     position: relative;
+    transition: .5s;
 }
 
 header {
@@ -71,6 +72,7 @@ img {
   animation: none;
   margin: none;
   position: absolute;
+  mix-blend-mode: lighten;
   width: 300px;
   top: 35%;
   left: -10%;
@@ -272,6 +274,10 @@ button:active {
   #GIF, #coração {
     transition: opacity .5s;
     opacity: 1;
+  }
+
+  button {
+    padding: 15px 30px;
   }
 }
 

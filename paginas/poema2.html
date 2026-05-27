@@ -12,15 +12,20 @@
     <title>Parte 2!</title>
     <style>
         body {
-            background: black url(../imagens/GIF-Imagens-Poema/parte2/parte2.gif) center center no-repeat;
+            background: black url(../imagens/GIF-Imagens-Poema/parte2/parte2.gif) center center no-repeat fixed;
+            transition: .5s ease-in-out;
         }
         section {
             width: 450px;
             margin-left: 0%;
         }
+
+        h1, h2 {
+            text-shadow: 3px 3px 3px black;
+        }
+
         h2 {
             font-size: 1em;
-            text-shadow: 1px 1px 1px black;
         }
 
         button#voltar {
@@ -29,6 +34,25 @@
             &:hover {
                 background: rgb(255, 61, 119);
                 box-shadow: 0 0 30px 8px rgba(236, 0, 79, 0.815);
+            }
+        }
+
+        @media screen and (min-width: 767px) {
+            body {
+                background-image: url(../imagens/GIF-Imagens-Poema/parte2/dança-parte2.gif);
+                
+            }
+
+            h1:hover::after {
+                width: 35%;
+            }
+
+            section {
+                width: 550px;
+            }
+
+            h2 {
+                font-size: 1.4em;
             }
         }
     </style>

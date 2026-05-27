@@ -18,6 +18,11 @@
             margin-bottom: 0px;
             text-align: center;
         }
+
+        h1, h2 {
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.829);
+        }
+
         h2 {
             font-size: 1.2em;
         }
@@ -34,8 +39,40 @@
 
         img {
             width: 440px;
+            opacity: 1;
+            transition: .5s;
         }
 
+        button {
+            border-color: #F9F9F5;
+            &:hover {
+                background: #F9F9F5;
+                box-shadow: 0 0 30px 5px #d6d6d6c7;
+                color: black;
+            }
+        }
+
+        @media screen and (min-width: 767px) {
+            body {
+                background: black url(../imagens/GIF-Imagens-Poema/parte3/sakura-lua.gif) no-repeat center center fixed;
+                background-size: cover;
+            }
+            h1:hover::after {
+                width: 35%;
+            }
+
+            section {
+                margin-top: -10%;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            img {
+                opacity: 0;
+            }
+        }
     </style>
 </head>
 <body>
