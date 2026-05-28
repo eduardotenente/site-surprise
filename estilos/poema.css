@@ -93,6 +93,9 @@ section {
 h1 {
   animation: tracking-in-contract 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
+h1, h2, button, abbr {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.829);
+}
 
 h1, h2 {
   user-select: none;
