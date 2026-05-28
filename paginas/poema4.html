@@ -37,12 +37,27 @@
             }
         }
 
-        button#avançar {
+        #voltar {
+            margin-top: -5%;
+        }
+
+        #avançar {
             border-color: rgb(255, 61, 119);
+            margin-top: -3%;
 
             &:hover {
                 background: rgb(255, 61, 119);
                 box-shadow: 0 0 30px 8px rgba(236, 0, 79, 0.815);
+            }
+        }
+
+        @media screen and (min-width: 767px) {
+            h2 {
+                font-size: 1.3em;
+            }
+
+            h1:hover::after {
+                width: 35%;
             }
         }
     </style>
