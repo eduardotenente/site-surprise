@@ -12,7 +12,7 @@
     <title>Poema Completo!</title>
     <style>
         body {
-            background: black url(../imagens/GIF-Imagens-Poema/poemacompleto/poemacompleto.gif) no-repeat fixed;
+            background: black url(../imagens/GIF-Imagens-Poema/poemacompleto/flores.gif) left center no-repeat fixed;
             background-size: cover;
         }
 
@@ -27,6 +27,7 @@
             margin-left: 1%;
             margin-right: 1%;
             margin-bottom: 20px;
+            transition: width .5s ease-in-out;
         }
 
         h1, h2, p {
@@ -44,10 +45,33 @@
 
         button {
             border-color: rgb(255, 61, 119);
+            transition: .5s ease-in-out;
 
             &:hover {
                 background: rgb(255, 61, 119);
                 box-shadow: 0 0 30px 8px rgba(236, 0, 79, 0.815);
+            }
+        }
+
+        @media screen and (min-width: 767px) {
+            main {
+                font-size: 1.3em;
+            }
+
+            #parte2 {
+                width: 625px;
+            }
+
+            #parte3 {
+                width: 525px;
+            }
+
+            #parte4 {
+                width: 605px;
+            }
+
+            button {
+                width: 200px;
             }
         }
     </style>

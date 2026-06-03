@@ -47,6 +47,7 @@ main {
     align-items: center;
     width: 480px;
     text-align: left;
+    transition: margin-top .5s ease-in-out;
 }
 
 img {
@@ -87,7 +88,7 @@ section {
   width: 450px;
   margin: 25% 1% 5% 20px;
   position: relative;
-  animation: slide-in-fwd-center 4s 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-in-fwd-center 2s 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 h1 {
@@ -249,7 +250,7 @@ button:active {
 
 
 @media screen and (min-width: 767px) {
-  #parte1 {
+  #parte1, #parte2, #parte3, #parte4 {
     font-size: 1.3em;
     width: 500px;
   }
