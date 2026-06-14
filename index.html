@@ -8,8 +8,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Sekuya&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="imagens/favicon_io/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="estilos/inicio.css">
-    <link rel="stylesheet" href="estilos/transiçao.css">
+    <link rel="stylesheet" href="estilos/transição-entrada-saida.css">
     <title>Four Years!</title>
+    <style>
+        ::view-transition-old(root) {
+            animation-name: slide-out;
+        }
+        @keyframes slide-out {
+            to {
+                translate: -100vw;
+            }
+        }
+    </style>
 </head>
 <body>
     <main>

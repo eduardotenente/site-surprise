@@ -159,7 +159,7 @@ a {
 }
 
 button {
-  animation: slide-top 2.5s 7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both, text-focus-in 1.5s 6s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation: slide-top 2.5s 5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both, text-focus-in 1.5s 6s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
   position: relative;
   padding: 10px 20px;
   border-radius: 7px;
