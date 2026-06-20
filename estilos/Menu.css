@@ -112,8 +112,90 @@ a {
   text-decoration: none;
 }
 
-#retorno {
-  opacity: 0;
+.exibir {
+  display: none;
+  padding: 20px;
+  transition: .5s ease-in-out;
+}
+
+#Alien-Stage {
+  background: black url(../imagens/Sua.jpg) center center no-repeat fixed;
+  background-size: cover;
+}
+
+#Galeria {
+  background: black url(../imagens/GIF/kuwapo\ on\ ig.gif) center center no-repeat fixed;
+  background-size: cover;
+}
+
+#Poema {
+  background: black url(../imagens/GIF-Imagens-Poema/parte1/correndo-na-praia.gif) center center no-repeat fixed;
+  background-size: cover;
+}
+
+#Inicio {
+  background: black url(../imagens/GIF/5\ centimeters\ per\ second\ _\ anime\ gif.gif) center center no-repeat fixed;
+  background-size: cover;
+}
+
+.card {
+  position: relative;
+  width: 45vw;
+  height: 200px;
+  background-color: #f2f2f221;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1000px;
+  box-shadow: 0 0 0 5px #0000003f;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.card p {
+  color: white;
+  font-family: "Sekuya", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.521);
+}
+
+.card__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f2f2f233;
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover .card__content {
+  transform: rotateX(0deg);
+}
+
+.card__title {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+}
+
+.card__description {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #777;
+  line-height: 1.4;
 }
 
 button {
@@ -346,7 +428,7 @@ button {
   animation: star-drift 5s linear infinite alternate;
 }
 
-/* --- Keyframes --- */
+
 @keyframes rotate-nebula {
   from {
     transform: rotate(0deg);
@@ -385,7 +467,6 @@ button {
   }
 }
 
-
 @media screen and (min-width: 580px) {
   #botao-fundo {
     margin-top: 1%;
@@ -396,8 +477,22 @@ button {
   }
 }
 
+@media screen and (min-width: 767px) {
+  .galaxy-btn {
+    display: none;
+  }
+
+  .exibir {
+    display: block;
+  }
+}
+
 @media screen and (min-width: 992px) {
   body {
     background-image: url(../imagens/GIF/minimoss.gif);
+  }
+
+  .card {
+    height: 250px;
   }
 }
