@@ -118,84 +118,59 @@ a {
   transition: .5s ease-in-out;
 }
 
-#Alien-Stage {
-  background: black url(../imagens/Sua.jpg) center center no-repeat fixed;
-  background-size: cover;
-}
-
-#Galeria {
-  background: black url(../imagens/GIF/kuwapo\ on\ ig.gif) center center no-repeat fixed;
-  background-size: cover;
-}
-
-#Poema {
-  background: black url(../imagens/GIF-Imagens-Poema/parte1/correndo-na-praia.gif) center center no-repeat fixed;
-  background-size: cover;
-}
-
-#Inicio {
-  background: black url(../imagens/GIF/5\ centimeters\ per\ second\ _\ anime\ gif.gif) center center no-repeat fixed;
-  background-size: cover;
+.bgblue {
+  background: linear-gradient(135deg, #fffffff5, #3a4b8a, #ffffff98);
+  padding: 1px;
+  border-radius: 1.2rem;
+  box-shadow: 0px 1rem 1.5rem -0.9rem #000000e1;
+  max-width: 375px;
 }
 
 .card {
-  position: relative;
-  width: 45vw;
-  height: 200px;
-  background-color: #f2f2f221;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  perspective: 1000px;
-  box-shadow: 0 0 0 5px #0000003f;
-  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  color: #bec4cf;
+  background: linear-gradient(135deg, #0d1120 0%, #3a4b8a 43%, #0d1120 100%);
+  padding: 10px;
+  border-radius: 1.2rem;
+  transition: .3s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+.card img {
+  width: 355px;
+  height: 200px;
+  border-radius: 1.2rem;
+  box-shadow: 0px 1rem 1.5rem -1.1rem #000000e1;
+}
+
+.card > .GIF {
+  
+}
+
+.card > #kuwapo {
+  width: 350px;
+  height: 260px;
+}
+
+.card h2, p {
+  text-align: left;
+}
+
+.card h2 {
+  font-family: "Sekuya", system-ui;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.1em;
 }
 
 .card p {
-  color: white;
-  font-family: "Sekuya", system-ui;
-  font-weight: 400;
-  font-style: normal;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.521);
-}
-
-.card__content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  box-sizing: border-box;
-  background-color: #f2f2f233;
-  transform: rotateX(-90deg);
-  transform-origin: bottom;
-  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.card:hover .card__content {
-  transform: rotateX(0deg);
-}
-
-.card__title {
-  margin: 0;
-  font-size: 24px;
-  color: #333;
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
   font-weight: 700;
-}
-
-.card__description {
-  margin: 10px 0 0;
-  font-size: 14px;
-  color: #777;
-  line-height: 1.4;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 0.8em;
 }
 
 button {
@@ -485,6 +460,7 @@ button {
   .exibir {
     display: block;
   }
+
 }
 
 @media screen and (min-width: 992px) {
@@ -492,7 +468,37 @@ button {
     background-image: url(../imagens/GIF/minimoss.gif);
   }
 
-  .card {
-    height: 250px;
+  main {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card img {
+    width: 250px;
+    height: 200px;
+    border-radius: 1.2rem;
+  }
+
+  .card > .GIF {
+    height: 150px;
+  }
+
+  .card h2, p {
+    font-family: "Sekuya", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+  }
+
+  .card h2 {
+    font-size: 1.1em;
+    font-style: italic;
+  }
+
+  .card p {
+    font-size: 0.7em;
+    
   }
 }

@@ -1,30 +1,32 @@
 @charset "UTF-8";
 
-@view-transition {
-    navigation: auto;
-}
-
-::view-transition-group(root) {
-    animation-duration: 1s;
-    animation-timing-function: ease;
-}
-
-::view-transition-old(root) {
-    animation-name: slide-out;
-}
-
-::view-transition-new(root) {
-    animation-name: slide-in;
-}
-
-@keyframes slide-out {
-    to {
-        translate: 100vw;
+@media (prefers-reduced-motion: no-preference) {
+    @view-transition {
+        navigation: auto;
     }
-}
-
-@keyframes slide-in {
-    from {
-        translate: -100vw;
+    
+    ::view-transition-group(root) {
+        animation-duration: 1s;
+        animation-timing-function: ease;
+    }
+    
+    ::view-transition-old(root) {
+        animation-name: slide-out;
+    }
+    
+    ::view-transition-new(root) {
+        animation-name: slide-in;
+    }
+    
+    @keyframes slide-out {
+        to {
+            translate: 100vw;
+        }
+    }
+    
+    @keyframes slide-in {
+        from {
+            translate: -100vw;
+        }
     }
 }
