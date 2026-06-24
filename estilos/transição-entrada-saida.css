@@ -5,8 +5,12 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
+
+    .card img, .imagem {
+        view-transition-name: article-image;
+    }
     
-    ::view-transition-group(page-content) {
+    /*::view-transition-group(page-content) {
         animation-duration: 1s;
         animation-timing-function: ease;
     }
@@ -33,7 +37,5 @@
     
     .card .inicio {
         view-transition-name: inicio-image;
-    }
-
-    
+    }*/
 }

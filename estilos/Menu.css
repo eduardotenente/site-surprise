@@ -491,7 +491,7 @@ button {
   }
 
   .card > #kuwapo {
-    width: 200px;
+    width: 240px;
     height: 170px;
   }
 
@@ -507,24 +507,24 @@ button {
   }
 
   .card h2 {
-    font-size: 1.1em;
+    font-size: 1.3em;
     font-style: italic;
   }
 
   .card p {
-    font-size: 0.7em;
+    font-size: 0.9em;
     
   }
 }
 
 @media screen and (min-width: 1075px) {
   .card > #alien-stage {
-    height: 160px;
+    height: 155px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .card img {
-    width: 23vw;
+    width: 22vw;
   }
 }
