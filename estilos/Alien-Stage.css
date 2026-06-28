@@ -88,10 +88,14 @@ a {
     content: '';
 }
 
+span {
+  padding: 0px 10px;
+}
+
 button {
   animation: slide-top 2.5s 4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both, text-focus-in 1s 4s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
   position: relative;
-  padding: 10px 20px;
+  padding: 15px 25px;
   border-radius: 7px;
   border: 1px solid rgb(61, 106, 255);
   font-size: 14px;

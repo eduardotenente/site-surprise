@@ -6,6 +6,14 @@
     box-sizing: border-box;
 }
 
+:root {
+  --azul-lunar: #adc6ff;
+  --violeta-estelar: #c084fc71;
+  --cinza: rgba(255, 255, 255, 0.411);
+  --branco: white;
+  --preto: black;
+}
+
 .sekuya-regular {
   font-family: "Sekuya", system-ui;
   font-weight: 400;
@@ -18,14 +26,14 @@
 .merriweather {
   font-family: "Merriweather", serif;
   font-optical-sizing: auto;
-  font-weight: 800;
+  font-weight: 600;
   font-style: normal;
   font-variation-settings:
     "wdth" 100;
 }
 
 body {
-    background: black url(../imagens/GIF/5\ centimeters\ per\ second\ _\ anime\ gif.gif) center center no-repeat fixed;
+    background: var(--preto) url(../imagens/GIF/5\ centimeters\ per\ second\ _\ anime\ gif.gif) center center no-repeat fixed;
     background-size: cover;
     height: 100dvh;
     display: grid;
@@ -41,7 +49,7 @@ main {
 }
 
 h1 {
-     color: white;
+     color: var(--branco);
      font-family: sans-serif;
      font-size: 1.7em;
      white-space: nowrap;
@@ -60,7 +68,7 @@ h1::after {
   height: 2px;
   bottom: 5%;
   left: 50%;
-  background-color: rgba(255, 255, 255, 0.411);
+  background-color: var(--cinza);
   transform: translateX(-50%);
   transition: width 0.3s ease-in-out;
 }
@@ -92,184 +100,181 @@ a {
 }
 
 button {
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.363);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.384);
 }
 
-.btn {
+.buttons {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 13rem;
-  overflow: hidden;
-  height: 3rem;
-  background-size: 300% 300%;
-  cursor: pointer;
-  backdrop-filter: blur(1rem);
-  border-radius: 5rem;
-  transition: 0.5s;
-  animation: gradient_301 5s ease infinite;
-  border: double 2px transparent;
-  background-image: linear-gradient(#212121, #212121),
-    linear-gradient(
-      137.48deg,
-      #ffdb3b 10%,
-      #fe53bb 45%,
-      #8f51ea 67%,
-      #0044ff 87%
-    );
-  background-origin: border-box;
-  background-clip: content-box, border-box;
+  justify-content: space-around;
+  top: 20px;
+  left: 20px;
 }
 
-#container-stars {
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  transition: 0.5s;
-  backdrop-filter: blur(1rem);
-  border-radius: 5rem;
-}
-
-strong {
-  z-index: 2;
-  font-family: "Avalors Personal Use";
-  font-size: 12px;
-  letter-spacing: 5px;
-  color: #ffffff;
-  text-shadow: 0 0 4px white;
-}
-
-#glow {
-  position: absolute;
-  display: flex;
-  width: 12rem;
-}
-
-.circle {
-  width: 100%;
-  height: 30px;
-  filter: blur(2rem);
-  animation: pulse_3011 4s infinite;
-  z-index: -1;
-}
-
-.circle:nth-of-type(1) {
-  background: rgba(254, 83, 186, 0.636);
-}
-
-.circle:nth-of-type(2) {
-  background: rgba(142, 81, 234, 0.704);
-}
-
-.btn:hover #container-stars {
-  z-index: 1;
-  background-color: #212121;
-}
-
-.btn:hover {
-  transform: scale(1.1);
-}
-
-.btn:active {
-  border: double 4px #fe53bb;
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-  animation: none;
-}
-
-.btn:active .circle {
-  background: #fe53bb;
-}
-
-#stars {
+.buttons button {
+  width: 150px;
+  height: 50px;
+  background-color: var(--violeta-estelar);
+  margin: 20px;
+  color: var(--branco);
   position: relative;
-  background: transparent;
-  width: 200rem;
-  height: 200rem;
+  overflow: hidden;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
 }
 
-#stars::after {
+.buttons button:before, .buttons button:after {
   content: "";
   position: absolute;
-  top: -10rem;
-  left: -100rem;
+  width: 0;
+  height: 2px;
+  background-color: var(--azul-lunar);
+  transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
+}
+
+.buttons button:before {
+  right: 0;
+  top: 0;
+  transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
+}
+
+.buttons button:after {
+  left: 0;
+  bottom: 0;
+}
+
+.buttons button span {
   width: 100%;
   height: 100%;
-  animation: animStarRotate 90s linear infinite;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
 }
 
-#stars::after {
-  background-image: radial-gradient(#ffffff 1px, transparent 1%);
-  background-size: 50px 50px;
-}
-
-#stars::before {
+.buttons button span:before, .buttons button span:after {
   content: "";
   position: absolute;
+  width: 2px;
+  height: 0;
+  background-color: var(--azul-lunar);
+  transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
+}
+
+.buttons button span:before {
+  right: 0;
   top: 0;
-  left: -50%;
-  width: 170%;
-  height: 500%;
-  animation: animStar 60s linear infinite;
+  transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
 }
 
-#stars::before {
-  background-image: radial-gradient(#ffffff 1px, transparent 1%);
-  background-size: 50px 50px;
-  opacity: 0.5;
+.buttons button span:after {
+  left: 0;
+  bottom: 0;
 }
 
-@keyframes animStar {
+.buttons button p {
+  padding: 0;
+  margin: 0;
+  transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.buttons button p:before, .buttons button p:after {
+  position: absolute;
+  width: 100%;
+  transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
+  z-index: 1;
+  left: 0;
+}
+
+.buttons button p:before {
+  content: attr(data-title);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.buttons button p:after {
+  content: attr(data-text);
+  top: 150%;
+  color: var(--azul-lunar);
+}
+
+.buttons button:hover:before, .buttons button:hover:after {
+  width: 100%;
+}
+
+.buttons button:hover span {
+  z-index: 1;
+}
+
+.buttons button:hover span:before, .buttons button:hover span:after {
+  height: 100%;
+}
+
+.buttons button:hover p:before {
+  top: -50%;
+  transform: rotate(5deg);
+}
+
+.buttons button:hover p:after {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.buttons button.start {
+  background-color: var(--azul-lunar);
+  box-shadow: 0px 5px 10px -10px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+.buttons button.start p:before {
+  top: -50%;
+  transform: rotate(5deg);
+}
+
+.buttons button.start p:after {
+  color: var(--branco);
+  transition: all 0s ease;
+  content: attr(data-start);
+  top: 50%;
+  transform: translateY(-50%);
+  animation: start 0.3s ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes start {
   from {
-    transform: translateY(0);
-  }
-
-  to {
-    transform: translateY(-135rem);
+    top: -50%;
   }
 }
 
-@keyframes animStarRotate {
-  from {
-    transform: rotate(360deg);
-  }
-
-  to {
-    transform: rotate(0);
-  }
+.buttons button.start:hover:before, .buttons button.start:hover:after {
+  display: none;
 }
 
-@keyframes gradient_301 {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
+.buttons button.start:hover span {
+  display: none;
 }
 
-@keyframes pulse_3011 {
-  0% {
-    transform: scale(0.75);
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
-  }
+.buttons button:active {
+  outline: none;
+  border: none;
+}
 
-  70% {
-    transform: scale(1);
-    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
-  }
-
-  100% {
-    transform: scale(0.75);
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-  }
+.buttons button:focus {
+  outline: 0;
 }
 
 @keyframes slide-top {

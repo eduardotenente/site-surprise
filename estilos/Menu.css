@@ -31,7 +31,7 @@ body {
     image-rendering: optimizeQuality;
     background-size: cover;
     text-align: center;
-    transition: .5s;
+    transition: .5s ease-in-out;
   }
 
 nav {
@@ -79,6 +79,7 @@ main {
   justify-content: center;
   align-items: center;
   animation: slide-top 2.5s 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both, text-focus-in 2s 2.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  transition: .5s ease-in-out;
 }
 
 @keyframes slide-top {
@@ -481,7 +482,7 @@ button {
   }
 
   .card img {
-    width: 21vw;
+    width: 20vw;
     height: 170px;
     border-radius: 1.2rem;
   }
