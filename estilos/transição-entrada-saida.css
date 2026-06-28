@@ -1,41 +1,43 @@
 @charset "UTF-8";
 
-@view-transition {
-    navigation: auto;
-}
-
 @media (prefers-reduced-motion: no-preference) {
-
-    .card img, .imagem {
-        view-transition-name: article-image;
-    }
-    
-    /*::view-transition-group(page-content) {
-        animation-duration: 1s;
-        animation-timing-function: ease;
-    }
-    
-    ::view-transition-old(page-content) {
-        animation-name: scale-out-br;
-    }
-    
-    ::view-transition-new(page-content) {
-        animation-name: scale-in-tl;
-    }
-    
-    .card .alien-stage {
-        view-transition-name: alien-stage-image;
+    @view-transition {
+        navigation: auto;
     }
 
-    .card img.kuwapo {
-        view-transition-name: galeria-image;
+    @keyframes scale-down {
+    from { transform: scale(1); opacity: 1; }
+    to { transform: scale(0.95); opacity: 0; }
     }
 
-    .card .poema {
-        view-transition-name: poema-image;
+    @keyframes scale-up {
+    from { transform: scale(1.05); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
     }
-    
-    .card .inicio {
-        view-transition-name: inicio-image;
+
+    ::view-transition-old(root) {
+    animation: 700ms ease-in both scale-down;
+    }
+
+    ::view-transition-new(root) {
+    animation: 900ms cubic-bezier(0.34, 1.56, 0.64, 1) both scale-up;
+    }
+    /*@keyframes fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+    }
+
+    @keyframes slide-up {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+    }
+
+    /* Aplica as animações na saída e na entrada */
+    /*::view-transition-old(root) {
+    animation: 550ms ease-out both fade-out;
+    }
+
+    ::view-transition-new(root) {
+    animation: 700ms cubic-bezier(0.25, 1, 0.5, 1) both slide-up;
     }*/
 }
