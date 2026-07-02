@@ -16,6 +16,7 @@
 }
 
 html, body {
+    margin: 0;
     scroll-behavior: smooth;
     background: black url(../imagens/GIF/kuwapo\ on\ ig.gif) center center no-repeat fixed;
     background-size: cover;
@@ -37,12 +38,12 @@ html, body {
 }
 
 menu {
+    margin-top: 0;
     position: sticky;
     top: 0;
     z-index: 9999;
-    width: 95%;
+    width: 93vw;
     height: 70px;
-    margin-left: -2%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -174,7 +175,6 @@ nav > section {
     height: 275px;
     display: flex;
     align-items: flex-end;
-    border-radius: 5px;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.479);
     animation: fade-in-fwd 3s 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
@@ -243,7 +243,6 @@ img {
     height: 250px;
     margin-right: 10px;
     border-radius: 10px;
-    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.479);
     image-rendering: optimizeQuality;
     transition: transform 0.5s ease-in-out;
     &:hover {
@@ -253,14 +252,11 @@ img {
 
 #borda {
     width: 417px;
+    height: 140px;
     mix-blend-mode: lighten;
     border-radius: none;
     transform: none;
     transition: none;
-}
-
-#borda {
-    height: 140px;
 }
 
 #gif-container {
@@ -405,9 +401,66 @@ button:active {
   }
 }
 
-@media screen and (min-width: 550px) {
-    body {
-        
-        
+
+@media screen and (min-width: 767px) {
+    .welcome {
+        font-size: 4.5vw;
+    }
+
+    .capa {
+        height: 350px;
+    }
+
+    #voltar {
+        padding: 15px 25px;
+        font-size: 17px;
+    }
+
+    #borda {
+        width: 97vw;
+        height: 140px;
+        padding: 50px 0px;
+    }
+
+    .gif {
+        width: 200px;
+    }
+
+    @keyframes scroll {
+        from {
+            transform: translateX(1%);
+        }
+
+        to {
+            transform: translateX(-50%);
+        }
+    }
+
+    @keyframes scroll-invert {
+        from {
+            transform: translateX(-50%);
+        }
+
+        to {
+            transform: translateX(1%);
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+     menu {
+        width: 95vw;
+    }
+    
+    a.menu {
+         font-weight: bolder;
+    }
+
+    .capa {
+        height: 450px;
+    }
+
+    #borda {
+        width: 98vw;
     }
 }
