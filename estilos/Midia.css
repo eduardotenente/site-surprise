@@ -17,7 +17,8 @@
 
 html, body {
     scroll-behavior: smooth;
-    background: black url(../imagens/GIF/kuwapo\ on\ ig.gif) no-repeat fixed;
+    background: black url(../imagens/GIF/kuwapo\ on\ ig.gif) center center no-repeat fixed;
+    background-size: cover;
     scroll-padding-top: 80px;
     min-height: 100%;
 }
@@ -402,4 +403,11 @@ button:active {
       filter: blur(0px);
       opacity: 1;
   }
+}
+
+@media screen and (min-width: 550px) {
+    body {
+        
+        
+    }
 }
