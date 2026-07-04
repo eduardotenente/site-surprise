@@ -42,7 +42,7 @@ menu {
     position: sticky;
     top: 0;
     z-index: 9999;
-    width: 93vw;
+    width: calc(87vw + 10px);
     height: 70px;
     display: flex;
     flex-flow: row nowrap;
@@ -69,19 +69,52 @@ menu {
 }
 
 ul {
-    margin-left: -10%;
+    margin-left: -17%;
     display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
     justify-content: space-evenly;
     width: 100%;
 }
 
 ul > li {
     list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    --cor-primaria: #fff;
+    --rosa-choque: rgb(255, 61, 245);
+    position: relative;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    &::after {
+        position: absolute;
+        content: "";
+        width: 0;
+        left: 0;
+        bottom: -7px;
+        background: var(--rosa-choque);
+        height: 2px;
+        transition: 0.3s ease-out;
+    }
+    &:hover::after {
+        width: 100%;
+    }
+}
+
+li:hover a.menu::before {
+    width: 100%;
 }
 
 a.menu {
+    margin: 0;
+    position: relative;
+    color: var(--cor-primaria);
     text-decoration: none;
-    color: white;
     font-family: "Merriweather", serif;
     font-optical-sizing: auto;
     font-weight: 700;
@@ -91,12 +124,20 @@ a.menu {
     font-size: 1em;
     text-align: center;
     animation: fadeup 1s 3.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-    transition: border-bottom 1s ease;
-    &:hover {
-        border-bottom: 1px solid rgb(129, 126, 126);
-        transition: border-bottom 1s;
+    transition: 0.3s ease-out;
+    &::before {
+        position: absolute;
+        box-sizing: border-box;
+        content: "";
+        width: 0%;
+        inset: 0;
+        color: var(--rosa-choque);
+        overflow: hidden;
+        transition: 0.3s ease-out;
     }
-    
+    &:hover {
+        color: rgb(255, 61, 245);
+    }
 }
 
 @keyframes fadeup {
@@ -112,7 +153,8 @@ a.menu {
 }
 
 #bem-vindo-container {
-    display: inline-block;
+    display: flex;
+    flex-flow: column nowrap;
     margin-top: 10%;
     margin-bottom: 10%;
     width: 100%;
@@ -136,7 +178,7 @@ h1 {
     text-align: center;
     overflow: hidden;
     font-weight: 700;
-    border-right: 0.15rem solid orange;
+    border-right: 0.15rem solid purple;
     white-space: nowrap;
     animation: typing 3s steps(30, end);
 }
@@ -148,12 +190,14 @@ h1 {
 
 @keyframes typing {
     from {
+        margin-left: 50%;
         width: 0;
         opacity: 0;
     }
 
     to {
-        width: 100%;
+        margin-left: 22%;
+        width: 57%;
         opacity: 1;
     }
 }
@@ -251,7 +295,7 @@ img {
 }
 
 #borda {
-    width: 417px;
+    width: calc(90vw + 25px);
     height: 140px;
     mix-blend-mode: lighten;
     border-radius: none;
@@ -402,7 +446,38 @@ button:active {
 }
 
 
+/* -------------- CONFIGURAÇÕES DE TELA --------------------*/
+
+@media screen and (min-width: 540px) {
+    menu {
+        width: calc(90vw + 10px);
+    }
+
+    ul {
+        margin-left: calc(-15% + 5%);
+    }
+}
+
+@media screen and (min-width: 670px) {
+    menu {
+        width: calc(90vw + 20px);
+    }
+
+    #borda {
+        width: calc(92vw + 35px);
+    }
+}
+
 @media screen and (min-width: 767px) {
+    menu {
+        width: calc(90vw + 35px);
+    }
+
+    a.menu {
+         font-weight: bolder;
+         font-size: 1.2em;
+    }
+
     .welcome {
         font-size: 4.5vw;
     }
@@ -445,15 +520,33 @@ button:active {
             transform: translateX(1%);
         }
     }
+
+    @keyframes typing {
+        from {
+            margin-left: 50%;
+            width: 0;
+            opacity: 0;
+        }
+
+        to {
+            margin-left: 31%;
+            width: 40%;
+            opacity: 1;
+        }
+    }
 }
 
 @media screen and (min-width: 992px) {
-     menu {
-        width: 95vw;
+    menu {
+        width: calc((95vw + 1vw) - 2px);
+    }
+
+    ul {
+        margin-left: calc(-15% + 10%);
     }
     
     a.menu {
-         font-weight: bolder;
+         font-size: 1.5em;
     }
 
     .capa {
