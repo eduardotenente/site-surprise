@@ -18,7 +18,7 @@
 html, body {
     margin: 0;
     scroll-behavior: smooth;
-    background: black url(../imagens/GIF/kuwapo\ on\ ig.gif) center center no-repeat fixed;
+    background: black url(../imagens/GIF/Miku-honkai-star-rail.gif) center center no-repeat fixed;
     background-size: cover;
     scroll-padding-top: 80px;
     min-height: 100%;
@@ -221,6 +221,7 @@ nav > section {
     align-items: flex-end;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.479);
     animation: fade-in-fwd 3s 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    transition: height .3s;
 }
 
 @keyframes fade-in-fwd {
@@ -245,7 +246,7 @@ nav > section {
 }
 
 #nana {
-    background: url(../imagens/GIF-Imagens-Galeria/capas/Nana\ cute\ x\ Nana\ Rock.jpg) center center;
+    background: url(../imagens/GIF-Imagens-Galeria/capas/Nana&Hachi.gif) center center;
     background-size: cover;
 }
 
@@ -281,6 +282,10 @@ main {
     animation: scroll-invert 22s linear infinite;
 }
 
+article > img {
+    box-shadow: 4px 4px 5px 0px rgb(0 0 0 / 31%);
+}
+
 img {
     object-fit: cover;
     width: 250px;
@@ -313,7 +318,7 @@ img {
     border-radius: none;
     transform: none;
     transition: none; 
-    mix-blend-mode: lighten;
+    mix-blend-mode: screen;
 }
 
 @keyframes scroll {
